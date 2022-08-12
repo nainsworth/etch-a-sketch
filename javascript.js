@@ -1,30 +1,26 @@
-const container = document.getElementById("container");
-
 // Generates Grid on Window startup
-window.onload = function() {
-    createGrid(16,16);
-}
+ window.onload = function() {
+     createGrid(16);
+ }
+// Default color
+ let color = "black";
 
-// Function that generates cells from user input
-function createGrid(cellRows, cellCols) {
-    for (let i = 0; i < cellCols; i++) {
-        const col = document.createElement("div");
-        container.appendChild(col);
-        for (let j = 0; j <  cellRows; j++) {
-            const cell = document.createElement("div");
-            cell.classList.add("cell");
-            col.appendChild(cell);
-        }
+ // Function that generates cells from user input
+ function createGrid(cells) {
+    let sketchPad = document.querySelector(".sketchPad");
+    sketchPad.style.gridTemplateColumns = `repeat(${cells}, 1fr)`;
+    sketchPad.style.gridTemplateRows = `repeat(${cells}, 1fr)`;
+    
+    for (let i = 0; i < (cells * cells); i++) {
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.style.border = "1px solid blue";
+        cell.addEventListener("mouseover", colorCell);
+        sketchPad.insertAdjacentElement("beforeend", cell);
     }
-    blackCell();
-}
-
+ }
+ 
 // Function that changes cells to black on mouse over
-function blackCell() {
-    const blackCells = document.querySelectorAll(".cell");
-    blackCells.forEach(cells => cells.addEventListener("mouseover", () => {
-        cells.setAttribute("style", "background: black;");
-    }))
+function colorCell() {
+    this.style.backgroundColor = color;
 }
-
-

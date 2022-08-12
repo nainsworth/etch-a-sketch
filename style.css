@@ -1,18 +1,11 @@
-#container {
-    display: flex;
-    width: 325px;
-    height: 325px;
-    border: 1px solid red;
-    border-radius: 15px;
-    background: red;
-    justify-content: center;
-    align-items: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.cell {
-    min-width: 15px;
-    min-height: 15px;
-    background-color: lightgrey;
-    border: 1px solid black;
+.sketchPad {
+    width: 500px;
+    height: 500px;
+    display: grid;
 }
-
