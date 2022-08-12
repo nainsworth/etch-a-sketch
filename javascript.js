@@ -20,7 +20,12 @@
     }
  }
  
-// Function that changes cells to black on mouse over
+// Function that colors in the cell on mouseover
 function colorCell() {
     this.style.backgroundColor = color;
+}
+
+// Function that changes the color to color in
+function changeColor(choice) {
+    color = choice;
 }
