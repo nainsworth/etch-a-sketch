@@ -4,10 +4,17 @@
  }
 // Default color
  let color = "black";
+ 
+ const gridSlider = document.getElementById("gridSlider");
+ const sliderValue = document.getElementById("sliderValue");
+
+ gridSlider.onmousemove = (e) => changeSliderValue(e.target.value);
 
  // Function that generates cells from user input
  function createGrid(cells) {
     let sketchPad = document.querySelector(".sketchPad");
+    let cellGrid = sketchPad.querySelectorAll("div");
+    cellGrid.forEach((element) => element.remove());
     sketchPad.style.gridTemplateColumns = `repeat(${cells}, 1fr)`;
     sketchPad.style.gridTemplateRows = `repeat(${cells}, 1fr)`;
     
@@ -28,4 +35,9 @@ function colorCell() {
 // Function that changes the color to color in
 function changeColor(choice) {
     color = choice;
+}
+
+// Updates Slider Value
+function changeSliderValue(sizeValue) {
+    sliderValue.innerText = `${sizeValue} x ${sizeValue}`;
 }
