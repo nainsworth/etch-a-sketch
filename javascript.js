@@ -15,14 +15,14 @@
  function createGrid(cells) {
     let sketchPad = document.querySelector(".sketchPad");
     let cellGrid = sketchPad.querySelectorAll("div");
-    cellGrid.forEach((element) => element.remove());
+    cellGrid.forEach((e) => e.remove());
     sketchPad.style.gridTemplateColumns = `repeat(${cells}, 1fr)`;
     sketchPad.style.gridTemplateRows = `repeat(${cells}, 1fr)`;
     
     for (let i = 0; i < (cells * cells); i++) {
         let cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.border = "1px solid blue";
+        cell.style.border = "1px solid gray";
         cell.addEventListener("mouseover", colorCell);
         sketchPad.insertAdjacentElement("beforeend", cell);
     }
@@ -53,4 +53,17 @@ function clearEtch() {
     let sketchPad = document.querySelector(".sketchPad");
     let cellGrid = sketchPad.querySelectorAll("div");
     cellGrid.forEach((element) => element.style.backgroundColor = "white");
+}
+
+// Toggles Grid Lines
+function toggleGrid() {
+    let sketchPad = document.querySelector(".sketchPad");
+    let cellGrid = sketchPad.querySelectorAll("div");
+    cellGrid.forEach((e) => {
+        if (e.style.border === "none") {
+            e.style.border = "1px solid gray"
+        } else {
+            e.style.border = "none"
+        }
+    });
 }
