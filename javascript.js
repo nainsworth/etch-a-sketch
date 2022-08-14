@@ -10,6 +10,7 @@
 
  gridSlider.onmousemove = (e) => changeSliderValue(e.target.value);
 
+
  // Function that generates cells from user input
  function createGrid(cells) {
     let sketchPad = document.querySelector(".sketchPad");
@@ -29,7 +30,12 @@
  
 // Function that colors in the cell on mouseover
 function colorCell() {
-    this.style.backgroundColor = color;
+    if (color === "random") {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else {
+        this.style.backgroundColor = color;
+    }
 }
 
 // Function that changes the color to color in
@@ -40,4 +46,11 @@ function changeColor(choice) {
 // Updates Slider Value
 function changeSliderValue(sizeValue) {
     sliderValue.innerText = `${sizeValue} x ${sizeValue}`;
+}
+
+// Resets Etch-a-sketch
+function clearEtch() {
+    let sketchPad = document.querySelector(".sketchPad");
+    let cellGrid = sketchPad.querySelectorAll("div");
+    cellGrid.forEach((element) => element.style.backgroundColor = "white");
 }
