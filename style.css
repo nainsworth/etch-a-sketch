@@ -20,8 +20,10 @@ body {
 }
 
 .sketchPad {
-    width: 600px;
-    height: 600px;
+    max-width: 600px;
+    min-width: 300px;
+    max-height: 600px;
+    min-height: 300px;
     display: grid;
     box-shadow: 0px 3px 10px gray;
 }
@@ -47,11 +49,13 @@ button,
 
 footer {
     align-items: center;
+    font-size: 10px;
 }
 
 .content {
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .controls {
