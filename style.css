@@ -34,4 +34,18 @@ footer,
     flex-direction: row;
 }
 
+.cell {
+    border-top: 1px solid dimgray;
+    border-left: 1px solid dimgray;
+}
 
+.sketchPad {
+    border-top: 1px solid dimgray;
+    border-left: 1px solid dimgray;
+    border-bottom: 2px solid dimgray;
+    border-right: 2px solid dimgray;
+}
+
+.grid-Off {
+    border: 2px solid dimgray;
+}

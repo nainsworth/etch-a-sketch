@@ -22,7 +22,6 @@
     for (let i = 0; i < (cells * cells); i++) {
         let cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.border = "1px solid gray";
         cell.addEventListener("mouseover", colorCell);
         sketchPad.insertAdjacentElement("beforeend", cell);
     }
@@ -59,11 +58,7 @@ function clearEtch() {
 function toggleGrid() {
     let sketchPad = document.querySelector(".sketchPad");
     let cellGrid = sketchPad.querySelectorAll("div");
-    cellGrid.forEach((e) => {
-        if (e.style.border === "none") {
-            e.style.border = "1px solid gray"
-        } else {
-            e.style.border = "none"
-        }
-    });
+    cellGrid.forEach((e) => e.classList.toggle("cell"));
+    sketchPad.classList.toggle("grid-Off");
+
 }
