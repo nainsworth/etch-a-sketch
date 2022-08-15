@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
 }
 
 html {
@@ -10,12 +11,19 @@ html {
 
 body {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    font-family: Silkscreen, "Lucida Console";
 }
 
 .sketchPad {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     display: grid;
+    box-shadow: 0px 3px 10px gray;
 }
 
 footer,
@@ -25,18 +33,35 @@ footer,
 .resolution,
 .buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+}
+
+button,
+#gridSlider {
+    cursor: pointer;
+}
+
+.title {
+    margin: 0 auto;
+}
+
+footer {
+    align-items: center;
 }
 
 .content {
     flex-direction: row;
+    justify-content: center;
+}
+
+.controls {
+    justify-content: space-around;
 }
 
 .cell {
     border-top: 1px solid dimgray;
     border-left: 1px solid dimgray;
+    background-color: white;
 }
 
 .sketchPad {
@@ -48,4 +73,6 @@ footer,
 
 .grid-Off {
     border: 2px solid dimgray;
+    background-color: white;
 }
+

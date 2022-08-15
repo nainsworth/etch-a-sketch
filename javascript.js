@@ -10,7 +10,6 @@
 
  gridSlider.onmousemove = (e) => changeSliderValue(e.target.value);
 
-
  // Function that generates cells from user input
  function createGrid(cells) {
     let sketchPad = document.querySelector(".sketchPad");
@@ -60,5 +59,4 @@ function toggleGrid() {
     let cellGrid = sketchPad.querySelectorAll("div");
     cellGrid.forEach((e) => e.classList.toggle("cell"));
     sketchPad.classList.toggle("grid-Off");
-
 }
