@@ -4,8 +4,34 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+}
+
 .sketchPad {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: grid;
 }
+
+footer,
+.flex-container,
+.content,
+.controls,
+.resolution,
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    flex-direction: row;
+}
+
+
