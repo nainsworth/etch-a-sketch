@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Silkscreen" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Silkscreen"
+    />
     <script type="text/javascript" src="./javascript.js" defer></script>
   </head>
   <body>
@@ -25,14 +28,23 @@
             <button onclick="clearEtch()">Reset</button>
           </div>
           <div class="resolution">
-            <div id="sliderValue">16 x 16</div>
-            <input type="range" id="gridSlider" min="1" max="100" value="16" onchange="createGrid(this.value)" />
+            <div id="sliderValue">Grid Size: 16 x 16</div>
+            <input
+              type="range"
+              id="gridSlider"
+              min="1"
+              max="100"
+              value="16"
+              onchange="createGrid(this.value)"
+            />
           </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="copyright">Copyright © <a href="https://github.com/nainsworth">META-N1CK</a> 2022</div>
+      <div class="copyright">
+        Copyright © <a href="https://github.com/nainsworth">META-N1CK</a> 2022
+      </div>
     </footer>
   </body>
 </html>

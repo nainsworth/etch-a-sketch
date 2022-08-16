@@ -42,7 +42,7 @@ function changeColor(choice) {
 
 // Updates Slider Value
 function changeSliderValue(sizeValue) {
-  sliderValue.innerText = `${sizeValue} x ${sizeValue}`;
+  sliderValue.innerText = `Grid Size: ${sizeValue} x ${sizeValue}`;
 }
 
 // Resets Etch-a-sketch
