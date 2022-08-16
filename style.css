@@ -1,29 +1,29 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 auto;
-    background-color: whitesmoke;
-    font-family: Silkscreen, "Lucida Console";
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  font-family: Silkscreen, "Lucida Console";
 }
 
 .sketchPad {
-    width: 550px;
-    height: 550px;
-    display: grid;
-    box-shadow: 0px 3px 10px gray;
+  width: 550px;
+  height: 550px;
+  display: grid;
+  box-shadow: 0px 3px 10px gray;
 }
 
 .flex-container,
@@ -31,55 +31,55 @@ body {
 .controls,
 .resolution,
 .buttons {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 button,
 #gridSlider {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .title {
-    margin: 15px auto;
-    font-size: 25px;
+  margin: 15px auto;
+  font-size: 25px;
 }
 
 footer {
-    margin: 10px auto;
-    font-size: 12px;
+  margin: 10px auto;
+  font-size: 12px;
 }
 
 .content {
-    justify-content: center;
-    align-items: center;
-    gap: 25px
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 
 .cell {
-    border-top: 1px solid dimgray;
-    border-left: 1px solid dimgray;
-    background-color: white;
+  border-top: 1px solid dimgray;
+  border-left: 1px solid dimgray;
+  background-color: white;
 }
 
 .sketchPad {
-    border-top: 1px solid dimgray;
-    border-left: 1px solid dimgray;
-    border-bottom: 2px solid dimgray;
-    border-right: 2px solid dimgray;
+  border-top: 1px solid dimgray;
+  border-left: 1px solid dimgray;
+  border-bottom: 2px solid dimgray;
+  border-right: 2px solid dimgray;
 }
 
 .grid-Off {
-    border: 2px solid dimgray;
-    background-color: white;
+  border: 2px solid dimgray;
+  background-color: white;
 }
 
 .buttons {
-    flex-direction: row;
-    gap: 10px;
+  flex-direction: row;
+  gap: 10px;
 }
 
-button{
-    width: 100px;
-    height: 30px;
+button {
+  width: 100px;
+  height: 30px;
 }
