@@ -20,13 +20,12 @@ body {
 }
 
 .sketchPad {
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
     display: grid;
     box-shadow: 0px 3px 10px gray;
 }
 
-footer,
 .flex-container,
 .content,
 .controls,
@@ -42,22 +41,19 @@ button,
 }
 
 .title {
-    margin: 0 auto;
+    margin: 15px auto;
+    font-size: 25px;
 }
 
 footer {
-    align-items: center;
-    font-size: 10px;
+    margin: 10px auto;
+    font-size: 12px;
 }
 
 .content {
-    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-.controls {
-    justify-content: space-around;
+    align-items: center;
+    gap: 25px
 }
 
 .cell {
@@ -78,3 +74,12 @@ footer {
     background-color: white;
 }
 
+.buttons {
+    flex-direction: row;
+    gap: 10px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+}
